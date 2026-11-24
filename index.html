@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#143b66">
+  <meta name="description" content="Explore the WITS 2026 conference program, December 16–18 in Lisbon. Find papers, authors and discussants, browse sessions, and build your own schedule.">
+  <meta property="og:title" content="WITS 2026 · Conference Program">
+  <meta property="og:description" content="December 16–18 · Lisbon, Portugal. Search the program and plan your conference.">
+  <meta property="og:image" content="https://wits-2026-program.github.io/lisbon.jpg">
+  <title>WITS 2026 · Conference Program</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="program-data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#program" data-i18n="skip">Skip to program</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="./" aria-label="WITS 2026 program"><img src="wits-logo.png" class="official-logo" alt="WITS — Workshop on Information Technologies and Systems" width="459" height="71"><span class="brand-year">2026</span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-item active" id="program-nav" data-action="view" data-view="program" aria-pressed="true"><span data-i18n="program">Program</span></button>
+        <button class="nav-item" id="saved-nav" data-action="view" data-view="saved" aria-pressed="false"><span class="nav-bookmark" data-icon="bookmark"></span><span data-i18n="mySchedule">My schedule</span><span class="count" id="saved-count">0</span></button>
+      </nav>
+      <div class="header-actions"><button class="text-button guide-button" data-action="guide"><span data-icon="info"></span><span data-i18n="presenterGuide">Presenter guide</span></button><a class="official-link" href="https://witsconf.org/" target="_blank" rel="noopener noreferrer">WITS website</a></div>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow">WITS 2026 <span class="eyebrow-rule"></span> LISBON, PORTUGAL</p>
+        <h1 id="page-title" data-i18n="conferenceProgram">Conference program<span class="title-dot">.</span></h1>
+        <p class="hero-description">36th Workshop on Information Technologies and Systems</p>
+        <div class="hero-meta"><span><span data-icon="calendar"></span><span data-i18n="conferenceDates">16–18 December 2026</span></span><span><span data-icon="pin"></span>Nova SBE · Carcavelos Campus</span></div>
+      </div>
+      <figure class="hero-image"><img src="lisbon.jpg" alt="Historic architecture and tiled façades in Lisbon" width="1920" height="480"><figcaption><span>WITS 2026</span><span>Lisbon, Portugal</span></figcaption></figure>
+    </section>
+
+    <section class="program-layout" id="program" aria-label="Conference schedule">
+      <aside class="sidebar" id="filters">
+        <div class="filter-heading"><h2 data-i18n="refine">Refine your program</h2><button class="reset-button" data-action="reset" data-i18n="reset">Reset</button><button class="icon-button mobile-filter-close" data-action="filters-close" aria-label="Close filters"><span data-icon="close"></span></button></div>
+        <fieldset><legend data-i18n="track">Track</legend><div class="track-options" id="track-options"></div></fieldset>
+        <fieldset><legend data-i18n="sessionType">Session type</legend><div class="select-wrap"><select id="type-filter" aria-label="Session type"></select><span data-icon="chevron"></span></div></fieldset>
+        <label class="nominee-filter"><input type="checkbox" id="nominee-filter"><span data-icon="award"></span><span data-i18n="bestNominees">Best paper nominees</span></label>
+        <div class="sidebar-note"><span data-icon="pin"></span><div><strong data-i18n="venue">The venue</strong><p>Nova School of Business<br>and Economics</p><span data-i18n="campus">Carcavelos Campus · Lisbon</span><small data-i18n="roomsTbd">Room assignments to be announced.</small><a class="venue-link" href="https://witsconf.org/wits2026-venue/" target="_blank" rel="noopener noreferrer">Venue &amp; travel information</a></div></div>
+        <div class="sidebar-footer"><button class="text-button sidebar-guide" data-action="guide"><span data-icon="info"></span><span data-i18n="presenterGuide">Presenter guide</span></button></div>
+        <button class="primary-button mobile-filter-apply" data-action="filters-close" data-i18n="showResults">Show results</button>
+      </aside>
+      <div class="filter-backdrop" data-action="filters-close"></div>
+
+      <div class="program-content">
+        <div class="search-controls">
+          <label class="search-box"><span data-icon="search"></span><span class="sr-only" data-i18n="searchLabel">Search papers, authors, discussants or sessions</span><input type="search" id="search" autocomplete="off" placeholder="Search papers, authors, discussants…" aria-describedby="search-hint"><button id="search-clear" class="icon-button" data-action="search-clear" aria-label="Clear search" hidden><span data-icon="close"></span></button><kbd aria-hidden="true">/</kbd></label>
+          <button class="filter-toggle" data-action="filters-open" aria-controls="filters" aria-expanded="false"><span data-icon="sliders"></span><span data-i18n="filtersLabel">Filters</span><span id="filter-count" hidden>0</span></button>
+        </div>
+        <div class="day-bar"><div class="day-tabs" id="day-tabs" role="group" aria-label="Select day"></div><button class="time-format" data-action="time-format" title="Switch time format">24h</button></div>
+        <div class="results-heading"><div><h2 id="results-title"></h2><p id="search-hint"></p></div><div class="results-actions"><button id="expand-all" class="text-button" data-action="expand-all"><span data-icon="expand"></span><span data-i18n="expandPapers">Expand papers</span></button><button id="export-calendar" class="text-button" data-action="export" hidden><span data-icon="calendar"></span><span data-i18n="exportCalendar">Export calendar</span></button></div></div>
+        <div class="active-filters" id="active-filters"></div>
+        <div id="schedule-info" class="schedule-info" hidden></div>
+        <div id="agenda"></div>
+        <div id="result-announcement" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+        <p class="program-footnote"><span data-icon="info"></span><span data-i18n="programFootnote">All times are local to Lisbon (WET, UTC+0). Bold author names indicate presenters, as marked in the source program.</span></p>
+      </div>
+    </section>
+    <footer class="site-footer"><span>WITS 2026 <span>·</span> <span data-i18n="footerLocation">16–18 December · Lisbon</span></span><a href="https://witsconf.org/wits2026-call-for-papers/" target="_blank" rel="noopener noreferrer">WITS 2026 conference website</a></footer>
+  </main>
+  <dialog id="detail-dialog" aria-labelledby="dialog-title"><div id="dialog-content"></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <noscript><p class="noscript-message">Please enable JavaScript to browse and search the conference program.</p></noscript>
+</body>
+</html>
