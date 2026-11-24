@@ -29,7 +29,7 @@
   const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const dict = {
     en: {
-      skip:'Skip to program',program:'Program',mySchedule:'My schedule',presenterGuide:'Presenter guide',conferenceProgram:'Conference program<span class="title-dot">.</span>',conferenceDates:'16–18 December 2026',refine:'Refine your program',reset:'Reset',track:'Track',sessionType:'Session type',bestNominees:'Best paper nominees',venue:'The venue',campus:'Carcavelos Campus · Lisbon',roomsTbd:'Room assignments to be announced.',showResults:'Show results',searchLabel:'Search papers, authors, discussants or sessions',filtersLabel:'Filters',expandPapers:'Expand papers',collapsePapers:'Collapse papers',exportCalendar:'Export calendar',programFootnote:'All times are local to Lisbon (WET, UTC+0). Bold author names indicate presenters, as marked in the source program.',footerLocation:'16–18 December · Lisbon',footerNote:'A little less searching. A little more connecting.',allTracks:'All tracks',allTypes:'All types',complete:'Complete papers',short:'Short papers',dissertation:'Dissertation proposals',feeder:'Feeder workshop',demo:'Demos & prototypes',events:'Keynote & other events',allDays:'All days',fullProgram:'Full program',day0:'Day 0',day1:'Day 1',day2:'Day 2',searchPlaceholder:'Search papers, authors, discussants…',chair:'Chair',room:'Room TBD',session:'Session',papers:'papers',paper:'paper',presentations:'presentations',parallel:'Parallel sessions',viewPapers:'View',matched:'matching',discussant:'Discussant',nomination:'Best paper nominee',saved:'Saved',save:'Save to my schedule',remove:'Remove from my schedule',savedToast:'Added to your schedule',removedToast:'Removed from your schedule',savedLocally:'Your selections are saved in this browser. Calendar exports use session times; individual presentation times are not specified.',noSavedTitle:'Make the program yours.',noSavedBody:'Save a session or a paper with the bookmark icon. Your picks will be waiting here.',browse:'Browse the program',noResults:'No matches just yet.',noResultsBody:'Try a different title or name, or clear your filters to explore the full program.',clearFilters:'Clear search & filters',searchResults:'Search results',sessions:'sessions',activities:'other activities',matches:'matching presentations',lisbonTime:'Lisbon time · UTC+0',searchAllDays:'Search covers all days; use the date tabs to narrow it down.',saveSession:'Save session',savedSession:'Session saved',copyLink:'Copy link',linkCopied:'Link copied',linkFailed:'Copy this page’s address to share this paper.',presenterNote:'Bold names indicate presenters, as marked in the source.',noPresenter:'No presenter is marked in the source program.',sessionTimeNote:'This is the session time. Individual presentation times are not specified in the program.',guideTitle:'Ready for your session.',guideIntro:'Presentation formats and practical notes from the WITS 2026 program.',completeTiming:'15 min presentation + 3 min discussant + 2 min Q&A',dissertationTiming:'18 min presentation + 2 min Q&A',shortTiming:'10 min presentation + 5 min Q&A',demoTiming:'Demo and Prototype Ignite Talks: 3 minutes each',guideItem1:'Report to your session chair 5 minutes before the session begins.',guideItem2:'The presenter of the last paper in each session will serve as the session chair.',guideItem3:'Session chairs coordinate with presenters to set up presentations.',guideItem4:'Presenting authors are shown in bold in the program. Room assignments and the social event details are to be announced.',gotIt:'Got it',downloaded:'Calendar file downloaded',noExport:'Save a session or paper to export your schedule.',storageError:'This browser could not save your selections. They will last for this visit only.',openPapers:'Open papers',selected:'saved items',allSessions:'All sessions',nomineesCount:'5 nominees across the program',allDates:'16–18 December 2026',results:'results',filtersTitle:'Program filters',close:'Close',clearSearch:'Clear search',timeLabel:'Switch between 12-hour and 24-hour time',dateFilter:'Select day',searchTip:'Search by paper title, author, discussant, or session chair.',savedEmptyFilter:'No saved items match these filters.',overlapNote:'Some saved sessions run at the same time. Review parallel sessions before exporting.',viewSession:'Session details',
+      skip:'Skip to program',program:'Program',mySchedule:'My schedule',presenterGuide:'Presenter guide',conferenceProgram:'Conference program<span class="title-dot">.</span>',conferenceDates:'16–18 December 2026',refine:'Refine your program',reset:'Reset',track:'Track',sessionType:'Session type',bestNominees:'Best paper nominees',venue:'The venue',campus:'Carcavelos Campus · Lisbon',roomsTbd:'Room assignments to be announced.',showResults:'Show results',searchLabel:'Search papers, authors, discussants or sessions',filtersLabel:'Filters',expandPapers:'Expand papers',collapsePapers:'Collapse papers',exportCalendar:'Export calendar',programFootnote:'All times are local to Lisbon (WET, UTC+0). Bold author names indicate presenters, as marked in the source program.',footerLocation:'16–18 December · Lisbon',footerNote:'A little less searching. A little more connecting.',allTracks:'All tracks',allTypes:'All types',complete:'Complete papers',short:'Short papers',dissertation:'Dissertation proposals',feeder:'Feeder workshop',demo:'Demos & prototypes',events:'Keynote & other events',allDays:'All days',fullProgram:'Full program',day0:'Day 0',day1:'Day 1',day2:'Day 2',searchPlaceholder:'Search papers, authors, discussants…',chair:'Chair',room:'Room TBD',session:'Session',papers:'papers',paper:'paper',presentations:'presentations',parallel:'Parallel sessions',viewPapers:'View',matched:'matching',discussant:'Discussant',nomination:'Best paper nominee',saved:'Saved',save:'Save to my schedule',remove:'Remove from my schedule',savedToast:'Added to your schedule',removedToast:'Removed from your schedule',savedLocally:'Your selections are saved in this browser. Calendar exports use session times; individual presentation times are not specified.',noSavedTitle:'Make the program yours.',noSavedBody:'Save a session or a paper with the bookmark icon. Your picks will be waiting here.',browse:'Browse the program',noResults:'No matches just yet.',noResultsBody:'Try a different title or name, or clear your filters to explore the full program.',clearFilters:'Clear search & filters',searchResults:'Search results',sessions:'sessions',activities:'other activities',matches:'matching presentations',lisbonTime:'Lisbon time · UTC+0',searchAllDays:'Search covers all days; use the date tabs to narrow it down.',saveSession:'Save session',savedSession:'Session saved',guideTitle:'Ready for your session.',guideIntro:'Presentation formats and practical notes from the WITS 2026 program.',completeTiming:'15 min presentation + 3 min discussant + 2 min Q&A',dissertationTiming:'18 min presentation + 2 min Q&A',shortTiming:'10 min presentation + 5 min Q&A',demoTiming:'Demo and Prototype Ignite Talks: 3 minutes each',guideItem1:'Report to your session chair 5 minutes before the session begins.',guideItem2:'The presenter of the last paper in each session will serve as the session chair.',guideItem3:'Session chairs coordinate with presenters to set up presentations.',guideItem4:'Presenting authors are shown in bold in the program. Room assignments and the social event details are to be announced.',gotIt:'Got it',downloaded:'Calendar file downloaded',noExport:'Save a session or paper to export your schedule.',storageError:'This browser could not save your selections. They will last for this visit only.',openPapers:'Open papers',selected:'saved items',allSessions:'All sessions',nomineesCount:'5 nominees across the program',allDates:'16–18 December 2026',results:'results',filtersTitle:'Program filters',close:'Close',clearSearch:'Clear search',timeLabel:'Switch between 12-hour and 24-hour time',dateFilter:'Select day',searchTip:'Search by paper title, author, discussant, or session chair.',savedEmptyFilter:'No saved items match these filters.',overlapNote:'Some saved sessions run at the same time. Review parallel sessions before exporting.',
     },
 
   };
@@ -89,7 +89,7 @@
     }).sort((a,b)=>`${a.date} ${a.start} ${a.track||'0'}`.localeCompare(`${b.date} ${b.start} ${b.track||'0'}`));
   }
   function paperHtml(p) {
-    return `<article class="paper-item" id="${esc(p.id)}">${p.nominated?nomineeBadge():''}<div class="paper-top"><button class="paper-title" data-action="paper" data-id="${esc(p.id)}">${highlighted(p.title)}</button>${saveButton(p.id,p.title)}</div><p class="paper-authors">${authorMarkup(p)}</p>${p.discussant?`<p class="discussant">${t('discussant')} <strong>${highlighted(p.discussant)}</strong></p>`:''}</article>`;
+    return `<article class="paper-item" id="${esc(p.id)}">${p.nominated?nomineeBadge():''}<div class="paper-top"><h4 class="paper-title">${highlighted(p.title)}</h4>${saveButton(p.id,p.title)}</div><p class="paper-authors">${authorMarkup(p)}</p>${p.discussant?`<p class="discussant">${t('discussant')} <strong>${highlighted(p.discussant)}</strong></p>`:''}</article>`;
   }
   const isExpanded = s => state.expandAll || state.expanded.has(s.id) || !!state.query.trim() || state.nominees || state.view==='saved';
   function sessionHtml(s) {
@@ -175,7 +175,6 @@
     if(removing)saved.delete(id);else saved.add(id);
     let stored=true;try{localStorage.setItem('wits2026-saved',JSON.stringify([...saved]));}catch{stored=false;}
     render();
-    if($('#detail-dialog').open && $('#detail-dialog').dataset.paper)populatePaper($('#detail-dialog').dataset.paper);
     toast(t(stored?(removing?'removedToast':'savedToast'):'storageError'));
   }
   function resetFilters() {clearTimeout(inputTimer);Object.assign(state,{day:'all',track:'all',type:'all',nominees:false,query:'',expandAll:false});$('#search').value='';render();}
@@ -192,19 +191,7 @@
     return sessions.some((a,i)=>sessions.slice(i+1).some(b=>a.date===b.date&&a.start<(b.end||b.start)&&b.start<(a.end||a.start)));
   }
   const closeDialogButton = () => `<button class="icon-button" data-action="dialog-close" aria-label="${t('close')}">${icon('close')}</button>`;
-  function populatePaper(id) {
-    const found=papersById.get(id);if(!found)return;
-    const {paper:p,session:s}=found;
-    $('#dialog-content').innerHTML=`<div class="dialog-head"><span class="dialog-kicker">${s.code?`${t('session')} ${s.code} · ${t('track')} ${s.track}`:t('demo')}</span>${closeDialogButton()}</div><div class="dialog-body">${p.nominated?nomineeBadge():''}<h2 id="dialog-title">${highlighted(p.title)}</h2><p class="dialog-authors">${authorMarkup(p)}</p><p class="dialog-caption">${t(p.presenters.length?'presenterNote':'noPresenter')}</p><div class="detail-facts"><div class="detail-fact">${icon('calendar')}<div><strong>${dayTitle(s.date)}</strong><br>${timeRange(s)} · ${t('lisbonTime')}</div></div><div class="detail-fact">${icon('paper')}<div><strong>${esc(s.title)}</strong><br>${t('chair')}: ${esc(s.chair)}</div></div>${p.discussant?`<div class="detail-fact">${icon('people')}<div>${t('discussant')}: <strong>${highlighted(p.discussant)}</strong></div></div>`:''}<div class="detail-fact">${icon('pin')}<div>${t('room')} · Nova SBE, Carcavelos Campus</div></div></div><p class="dialog-caption">${t('sessionTimeNote')}</p><div class="dialog-actions"><button class="primary-button" data-action="save" data-id="${id}" aria-pressed="${saved.has(id)}">${icon(saved.has(id)?'check':'bookmark')}${t(saved.has(id)?'saved':'save')}</button><button class="secondary-button" data-action="copy-link" data-id="${id}">${icon('link')}${t('copyLink')}</button></div></div>`;
-  }
-  function openPaper(id,updateUrl=true) {
-    if(!papersById.has(id))return;
-    const dialog=$('#detail-dialog');dialog.dataset.paper=id;populatePaper(id);
-    if(!dialog.open)dialog.showModal();
-    if(updateUrl)history.replaceState(null,'','#'+id);
-  }
   function openGuide() {
-    delete $('#detail-dialog').dataset.paper;
     $('#dialog-content').innerHTML=`<div class="dialog-head"><span class="dialog-kicker">WITS 2026 · ${t('presenterGuide')}</span>${closeDialogButton()}</div><div class="dialog-body"><h2 id="dialog-title">${t('guideTitle')}</h2><p class="guide-intro">${t('guideIntro')}</p>${['complete','dissertation','short','demo'].map(k=>`<div class="format-row"><strong>${t(k)}</strong><span>${t(k+'Timing')}</span></div>`).join('')}<ul class="guide-list">${[1,2,3,4].map(n=>`<li>${t('guideItem'+n)}</li>`).join('')}</ul><div class="dialog-actions"><button class="primary-button" data-action="dialog-close">${t('gotIt')}</button></div></div>`;
     if(!$('#detail-dialog').open)$('#detail-dialog').showModal();
   }
@@ -229,11 +216,10 @@
     const blob=new Blob([lines.map(fold).join('\r\n')+'\r\n'],{type:'text/calendar;charset=utf-8'});
     const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='WITS-2026-My-Schedule.ics';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500);toast(t('downloaded'));
   }
-  document.addEventListener('click',async event=>{
+  document.addEventListener('click',event=>{
     const button=event.target.closest('[data-action]');if(!button)return;
     const action=button.dataset.action;
     if(action==='save'){toggleSave(button.dataset.id);return;}
-    if(action==='paper'){openPaper(button.dataset.id);return;}
     if(action==='expand'){
       const id=button.dataset.id, panel=$('#papers-'+id), expanded=button.getAttribute('aria-expanded')==='true';
       if(expanded)state.expanded.delete(id);else state.expanded.add(id);
@@ -253,10 +239,7 @@
     if(action==='guide'){openGuide();return;}
     if(action==='dialog-close'){$('#detail-dialog').close();return;}
     if(action==='export'){exportCalendar();return;}
-    if(action==='copy-link'){
-      const url=new URL(location.href);url.hash=button.dataset.id;
-      try{await navigator.clipboard.writeText(url.href);toast(t('linkCopied'));}catch{toast(t('linkFailed'));}
-    }
+
   });
   $('#search').addEventListener('input',event=>{
     clearTimeout(inputTimer);const value=event.target.value;
@@ -276,11 +259,8 @@
     }
   });
   $('#detail-dialog').addEventListener('click',event=>{if(event.target===$('#detail-dialog')){const r=event.target.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)event.target.close();}});
-  $('#detail-dialog').addEventListener('close',()=>{if(location.hash.startsWith('#paper-')||location.hash.startsWith('#demo-'))history.replaceState(null,'',location.pathname+location.search);delete $('#detail-dialog').dataset.paper;});
-  window.addEventListener('hashchange',()=>{const id=location.hash.slice(1);if(papersById.has(id))openPaper(id,false);else if($('#detail-dialog').open)$('#detail-dialog').close();});
   window.addEventListener('resize',()=>{if(window.innerWidth>680&&document.body.classList.contains('filters-open'))filtersOpen(false);});
   window.addEventListener('storage',event=>{if(event.key==='wits2026-saved'){const current=readLocal('wits2026-saved',[]);saved.clear();if(Array.isArray(current))current.filter(id=>itemsById.has(id)||papersById.has(id)).forEach(id=>saved.add(id));render();}});
   $$('[data-icon]').forEach(el=>{el.innerHTML=icon(el.dataset.icon);});
   setLanguage();
-  if(papersById.has(location.hash.slice(1)))openPaper(location.hash.slice(1),false);
 })();

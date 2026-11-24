@@ -12,7 +12,7 @@ This is a static website: no package installation or build step is required. For
 
 - `index.html`: page structure and conference links
 - `styles.css`: responsive layout and styling
-- `app.js`: search, filtering, bookmarks, paper details, and calendar export
+- `app.js`: search, filtering, bookmarks, presenter instructions, and calendar export
 - `program.json`: structured conference data
 - `program-data.js`: the same data as a buildless JavaScript payload
 
