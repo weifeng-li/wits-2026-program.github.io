@@ -2139,7 +2139,7 @@
       "date": "2026-12-16",
       "start": "18:30",
       "end": "20:30",
-      "title": "Welcome reception",
+      "title": "Welcome Reception",
       "kind": "social",
       "room": "Room TBD"
     },
@@ -2204,7 +2204,7 @@
       "date": "2026-12-17",
       "start": "09:50",
       "end": "10:10",
-      "title": "Coffee break",
+      "title": "Coffee Break",
       "kind": "break",
       "room": "Room TBD"
     },
@@ -2213,7 +2213,7 @@
       "date": "2026-12-17",
       "start": "12:00",
       "end": "13:20",
-      "title": "Lunch & demo presentations",
+      "title": "Lunch & Demo Presentations",
       "kind": "demo",
       "room": "Room TBD",
       "chair": "Rui Chen, Denghui Zhang",
@@ -2284,7 +2284,7 @@
       "date": "2026-12-17",
       "start": "13:30",
       "end": "14:30",
-      "title": "Keynote speech",
+      "title": "Keynote Speech",
       "kind": "keynote",
       "room": null,
       "speaker": "Alexander Tuzhilin",
@@ -2295,7 +2295,7 @@
       "date": "2026-12-17",
       "start": "14:30",
       "end": "14:50",
-      "title": "Coffee break",
+      "title": "Coffee Break",
       "kind": "break",
       "room": "Room TBD"
     },
@@ -2304,7 +2304,7 @@
       "date": "2026-12-17",
       "start": "15:50",
       "end": "16:10",
-      "title": "Coffee break",
+      "title": "Coffee Break",
       "kind": "break",
       "room": "Room TBD"
     },
@@ -2331,7 +2331,7 @@
       "date": "2026-12-17",
       "start": "18:35",
       "end": "21:30",
-      "title": "Social event",
+      "title": "Social Event",
       "kind": "social",
       "room": null,
       "note": "Details TBD. Buses leave for the social event at 18:35."
@@ -2341,7 +2341,7 @@
       "date": "2026-12-18",
       "start": "09:50",
       "end": "10:20",
-      "title": "Coffee break",
+      "title": "Coffee Break",
       "kind": "break",
       "room": "Room TBD"
     },
@@ -2350,7 +2350,7 @@
       "date": "2026-12-18",
       "start": "12:00",
       "end": "13:20",
-      "title": "Lunch & awards ceremony",
+      "title": "Lunch & Awards Ceremony",
       "kind": "event",
       "room": "Room TBD"
     },
@@ -2359,7 +2359,7 @@
       "date": "2026-12-18",
       "start": "13:20",
       "end": "14:20",
-      "title": "Industry panel",
+      "title": "Industry Panel",
       "kind": "event",
       "room": "Room TBD"
     },
@@ -2368,7 +2368,7 @@
       "date": "2026-12-18",
       "start": "15:50",
       "end": "16:10",
-      "title": "Coffee break",
+      "title": "Coffee Break",
       "kind": "break",
       "room": "Room TBD"
     },
