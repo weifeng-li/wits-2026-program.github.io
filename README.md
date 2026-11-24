@@ -13,6 +13,7 @@ This is a static website: no package installation or build step is required. For
 - `index.html`: page structure and conference links
 - `styles.css`: responsive layout and styling
 - `app.js`: search, filtering, bookmarks, presenter instructions, and calendar export
+- `WITS-2026-Tentative-Program.pdf`: downloadable conference program
 - `program.json`: structured conference data
 - `program-data.js`: the same data as a buildless JavaScript payload
 

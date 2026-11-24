@@ -17,4 +17,4 @@
 @media(max-width:1150px){.official-logo{width:164px}.header-inner{gap:28px}.brand-year{font-size:18px}.header-actions{gap:16px}}
 @media(max-width:900px){.official-logo{width:155px}.header-inner{gap:24px}}
 @media(max-width:680px){.official-logo{width:136px}.brand{gap:9px}.brand-year{padding-left:9px;font-size:18px}.official-link{font-size:12px;min-height:40px}.header-inner{gap:14px}.site-footer>a{display:inline-block;margin-top:8px}.header-inner .brand,.header-actions{margin-top:12px;margin-bottom:1px}}
-@media(min-width:901px){.sidebar-footer{display:none}}
+
