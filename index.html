@@ -11,8 +11,7 @@
   <title>WITS 2026 · Conference Program</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
-  <script src="program-data.js" defer></script>
-  <script src="app.js" defer></script>
+  <script src="app.js?v=20261124-json" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#program" data-i18n="skip">Skip to program</a>
@@ -56,7 +55,7 @@
           <button class="filter-toggle" data-action="filters-open" aria-controls="filters" aria-expanded="false"><span data-icon="sliders"></span><span data-i18n="filtersLabel">Filters</span><span id="filter-count" hidden>0</span></button>
         </div>
         <div class="day-bar"><div class="day-tabs" id="day-tabs" role="group" aria-label="Select day"></div><button class="time-format" data-action="time-format" title="Switch time format">24h</button></div>
-        <div class="results-heading"><div><h2 id="results-title"></h2><p id="search-hint"></p></div><div class="results-actions"><button id="expand-all" class="text-button" data-action="expand-all"><span data-icon="expand"></span><span data-i18n="expandPapers">Expand papers</span></button><button id="export-calendar" class="text-button" data-action="export" hidden><span data-icon="calendar"></span><span data-i18n="exportCalendar">Export calendar</span></button></div></div>
+        <div class="results-heading"><div><h2 id="results-title">Loading program…</h2><p id="search-hint"></p></div><div class="results-actions"><button id="expand-all" class="text-button" data-action="expand-all"><span data-icon="expand"></span><span data-i18n="expandPapers">Expand papers</span></button><button id="export-calendar" class="text-button" data-action="export" hidden><span data-icon="calendar"></span><span data-i18n="exportCalendar">Export calendar</span></button></div></div>
         <div class="active-filters" id="active-filters"></div>
         <div id="schedule-info" class="schedule-info" hidden></div>
         <div id="agenda"></div>

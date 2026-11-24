@@ -14,10 +14,13 @@ This is a static website: no package installation or build step is required. For
 - `styles.css`: responsive layout and styling
 - `app.js`: search, filtering, bookmarks, presenter instructions, and calendar export
 - `WITS-2026-Tentative-Program.pdf`: downloadable conference program
-- `program.json`: structured conference data
-- `program-data.js`: the same data as a buildless JavaScript payload
+- `program.json`: the single source for conference data, loaded directly by the website
 
-Keep both data files synchronized. The extractor in `scripts/extract_program.py` can regenerate them from the original document layout with `python scripts/extract_program.py /path/to/program.docx` (requires lxml). Review revised document structures, event times, and room assignments before publishing.
+Edit `program.json` to update activity titles, paper details, times, or rooms. Commit the change to `main`, wait for the GitHub Pages deployment to finish, and refresh the website. The page fetches this file on each load with browser caching disabled; there is no second data file to maintain.
+
+The extractor in `scripts/extract_program.py` can regenerate `program.json` from the original document layout with `python scripts/extract_program.py /path/to/program.docx` (requires lxml). Review generated data before publishing; regeneration replaces manual edits.
+
+For a local preview, run `python3 -m http.server 8000` in this folder and open `http://localhost:8000/`. The program is loaded over HTTP.
 
 All times use Europe/Lisbon. Individual presentation times are not inferred; calendar exports use session blocks. Presenter markings and unassigned discussants are preserved from the supplied program.
 

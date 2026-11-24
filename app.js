@@ -1,8 +1,24 @@
-(() => {
+(async () => {
   'use strict';
-  const data = window.WITS_DATA;
   const $ = s => document.querySelector(s);
   const $$ = s => [...document.querySelectorAll(s)];
+  // Load the editable program directly; no generated JavaScript data copy.
+  let data;
+  try {
+    const response = await fetch('program.json', {cache:'no-store'});
+    if (!response.ok) throw new Error('Program request failed');
+    data = await response.json();
+    if (!Array.isArray(data?.sessions) || !Array.isArray(data?.events) || !Array.isArray(data?.dates)) {
+      throw new Error('Invalid program data');
+    }
+  } catch {
+    $('#results-title').textContent = 'Program unavailable';
+    $('#search-hint').textContent = 'Please try again in a moment, or download the program below.';
+    $('#agenda').innerHTML = '<div class="empty-state"><h3>The program could not be loaded.</h3><div class="dialog-actions"><button class="primary-button" id="retry-program">Try again</button><a class="secondary-button" href="WITS-2026-Tentative-Program.pdf" download="WITS 2026 Tentative Program.pdf">Download program (PDF)</a></div></div>';
+    $$('.main-nav button, .header-actions button, .sidebar button, .filter-toggle, #search, #type-filter, #nominee-filter, .time-format, #expand-all').forEach(el => { el.disabled = true; });
+    $('#retry-program').addEventListener('click', () => location.reload());
+    return;
+  }
   const icons = {
     search:'<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/>',
     bookmark:'<path d="M6 4h12v17l-6-4-6 4z"/>',
@@ -147,7 +163,7 @@
         let items=visibleItems.filter(s=>s.date===date);if(!items.length)return '';
         const arrivals=(!state.query.trim()&&state.view==='program'&&state.type==='all'&&!state.nominees&&date!=='2026-12-16')?items.filter(s=>['registration','transport'].includes(s.kind)||s.id.startsWith('breakfast-')):[];
         if(arrivals.length)items=items.filter(s=>!arrivals.includes(s));
-        const arrivalHtml=arrivals.length?`<details class="arrival-details"><summary><span>${icon('cup')}</span><span>${'Arrival, breakfast & registration'}<small>${`Breakfast from ${time('07:30')} · Buses arrive by ${time('08:10')}`}</small></span><span>${icon('chevron')}</span></summary><div class="arrival-list">${arrivals.map(s=>`<div class="arrival-item"><div><strong>${esc(s.title)}</strong><span>${timeRange(s)}${s.room?' · '+t('room'):''}</span></div>${saveButton(s.id,s.title)}</div>`).join('')}</div></details>`:'';
+        const arrivalHtml=arrivals.length?`<details class="arrival-details"><summary><span>${icon('cup')}</span><span>${'Arrival, Breakfast & Registration'}<small>${`Breakfast from ${time('07:30')} · Buses arrive by ${time('08:10')}`}</small></span><span>${icon('chevron')}</span></summary><div class="arrival-list">${arrivals.map(s=>`<div class="arrival-item"><div><strong>${esc(s.title)}</strong><span>${timeRange(s)}${s.room?' · '+t('room'):''}</span></div>${saveButton(s.id,s.title)}</div>`).join('')}</div></details>`:'';
         const slots=[...new Set(items.map(s=>s.start+'|'+(s.end||'')))].sort();
         return `<section class="agenda-day" aria-label="${esc(dayTitle(date))}">${state.day==='all'?`<h3 class="date-heading">${dayTitle(date)}<span>${t('day'+data.dates.indexOf(date))}</span></h3>`:''}${arrivalHtml}${slots.map(slot=>{
           const group=items.filter(s=>s.start+'|'+(s.end||'')===slot),sessions=group.filter(s=>s.code),events=group.filter(s=>!s.code);

@@ -90,28 +90,28 @@ def extract(path):
                            kind=category, room="Room TBD", **extra))
 
     event("registration-0", "2026-12-16", "18:00", "20:30", "Registration / Check-in", "registration")
-    event("reception", "2026-12-16", "18:30", "20:30", "Welcome reception", "social")
+    event("reception", "2026-12-16", "18:30", "20:30", "Welcome Reception", "social")
     for day, end in [(17, "17:00"), (18, "12:00")]:
         date = f"2026-12-{day}"
         event(f"registration-{day}", date, "07:30", end, "Registration", "registration")
         event(f"breakfast-{day}", date, "07:30", "08:30", "Breakfast", "break")
         event(f"bus-{day}", date, "08:10", None, "Buses arrive at Nova SBE", "transport", note="Arrive by 08:10.")
-    event("coffee-1", "2026-12-17", "09:50", "10:10", "Coffee break", "break")
+    event("coffee-1", "2026-12-17", "09:50", "10:10", "Coffee Break", "break")
     demo_ps = [p for p in rows[6].findall("w:tc", NS)[1].findall("w:p", NS) if text(p)]
-    event("lunch-demos", "2026-12-17", "12:00", "13:20", "Lunch & demo presentations", "demo",
+    event("lunch-demos", "2026-12-17", "12:00", "13:20", "Lunch & Demo Presentations", "demo",
           chair="Rui Chen, Denghui Zhang", note="Demo and Prototype Ignite Talks · 3 minutes each",
           papers=[paper(p, f"demo-{i+1}", "demo") for i, p in enumerate(demo_ps[2:])])
-    event("keynote", "2026-12-17", "13:30", "14:30", "Keynote speech", "keynote",
+    event("keynote", "2026-12-17", "13:30", "14:30", "Keynote Speech", "keynote",
           speaker="Alexander Tuzhilin", note="Leonard N. Stern Professor, Stern School of Business, NYU")
-    event("coffee-2", "2026-12-17", "14:30", "14:50", "Coffee break", "break")
-    event("coffee-3", "2026-12-17", "15:50", "16:10", "Coffee break", "break")
+    event("coffee-2", "2026-12-17", "14:30", "14:50", "Coffee Break", "break")
+    event("coffee-3", "2026-12-17", "15:50", "16:10", "Coffee Break", "break")
     event("doctoral", "2026-12-17", "16:10", "17:10", "Doctoral Student Corner")
     event("board", "2026-12-17", "17:25", "18:25", "WITS Board Meeting")
-    event("social", "2026-12-17", "18:35", "21:30", "Social event", "social", note="Details TBD. Buses leave for the social event at 18:35.")
-    event("coffee-4", "2026-12-18", "09:50", "10:20", "Coffee break", "break")
-    event("lunch-awards", "2026-12-18", "12:00", "13:20", "Lunch & awards ceremony")
-    event("panel", "2026-12-18", "13:20", "14:20", "Industry panel")
-    event("coffee-5", "2026-12-18", "15:50", "16:10", "Coffee break", "break")
+    event("social", "2026-12-17", "18:35", "21:30", "Social Event", "social", note="Details TBD. Buses leave for the social event at 18:35.")
+    event("coffee-4", "2026-12-18", "09:50", "10:20", "Coffee Break", "break")
+    event("lunch-awards", "2026-12-18", "12:00", "13:20", "Lunch & Awards Ceremony")
+    event("panel", "2026-12-18", "13:20", "14:20", "Industry Panel")
+    event("coffee-5", "2026-12-18", "15:50", "16:10", "Coffee Break", "break")
     event("business", "2026-12-18", "17:30", "18:00", "General Business Meeting")
     # These locations are not specified in the source. Avoid inventing a room.
     for e in events:
@@ -126,7 +126,6 @@ def extract(path):
     assert sum(p["nominated"] for p in papers) == 5
     assert sum(p["discussant"] == "TBD" for p in papers) == 1
     (ROOT / "program.json").write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n")
-    (ROOT / "program-data.js").write_text("window.WITS_DATA = " + json.dumps(data, ensure_ascii=False) + ";\n")
     print(json.dumps(dict(sessions=len(sessions), presentations=len(papers), papers=len(papers)-4,
                          demos=4, nominees=sum(p["nominated"] for p in papers), events=len(events))))
 
